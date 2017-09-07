@@ -1,0 +1,221 @@
+body{
+  background-color: #D07549;
+}
+div { width: 1rem; height: 0.4rem; font-size: 12px; // 默认写上dpr为1的fontSize 
+} 
+[data-dpr="2"] div { font-size: 24px; } 
+[data-dpr="3"] div { font-size: 36px; }
+.game-main{
+  width: 10.0rem;
+  height: 16.08rem;
+  background: url('bg.jpg');
+  background-repeat: repeat;
+  background-size: 100%;
+  margin: 0 auto;
+}
+.game-header{
+  width: 10.0rem;
+  height: 4.666667rem;
+  margin: 0 auto;
+}
+.game-container{
+  width: 10.0rem;
+  height:7.733333rem;
+  margin: 0 auto;
+  position: relative;
+}
+.game-card {
+  width: 2.0rem;
+  height: 2.733333rem;
+  background-image:  url('1.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  left:7.0rem;
+  top:4.7rem;
+}
+.clight {
+  background-image: url('2.png');
+}
+.all-props{
+  transition: all .5s !important;
+  -moz-transition: all .5s !important; /* Firefox 4 */
+  -webkit-transition: all .5s !important; /* Safari 和 Chrome */
+  -o-transition: all .5s !important; /* Opera */
+}
+.mv-1{
+  transition: top .5s,left .5s;
+-moz-transition: top .5s,left .5s; /* Firefox 4 */
+-webkit-transition: top .5s,left .5s; /* Safari 和 Chrome */
+-o-transition: top .5s,left .5s; /* Opera */
+}
+.mv-2{
+  transition: top .5s ease .5s,left .5s ease .5s;
+-moz-transition: top .5s ease .5s,left .5s ease .5s; /* Firefox 4 */
+-webkit-transition: top .5s ease .5s,left .5s ease .5s; /* Safari 和 Chrome */
+-o-transition: top .5s ease .5s,left .5s ease .5s; /* Opera */
+}
+.mv-3{
+  transition: top .5s ease 1s,left .5s ease 1s;
+-moz-transition: top .5s ease 1s,left .5s ease 1s; /* Firefox 4 */
+-webkit-transition: top .5s ease 1s,left .5s ease 1s; /* Safari 和 Chrome */
+-o-transition: top .5s ease 1s,left .5s ease 1s; /* Opera */
+}
+.mv-4{
+  transition: top .5s ease 1.5s,left .5s ease 1.5s;
+-moz-transition: top .5s ease 1.5s,left .5s ease 1.5s; /* Firefox 4 */
+-webkit-transition: top .5s ease 1.5s,left .5s ease 1.5s; /* Safari 和 Chrome */
+-o-transition: top .5s ease 1.5s,left .5s ease 1.5s; /* Opera */
+}
+.mv-5{
+  transition: top .5s ease 2s,left .5s ease 2s;
+-moz-transition: top .5s ease 2s,left .5s ease 2s; /* Firefox 4 */
+-webkit-transition: top .5s ease 2s,left .5s ease 2s; /* Safari 和 Chrome */
+-o-transition: top .5s ease 2s,left .5s ease 2s; /* Opera */
+}
+.mv-6{
+  transition: top .5s ease 2.5s,left .5s ease 2.5s;
+-moz-transition: top .5s ease 2.5s,left .5s ease 2.5s; /* Firefox 4 */
+-webkit-transition: top .5s ease 2.5s,left .5s ease 2.5s; /* Safari 和 Chrome */
+-o-transition: top .5s ease 2.5s,left .5s ease 2.5s; /* Opera */
+}
+.card-1{
+  left:1.0rem;
+  top:0.8rem;
+}
+.card-2{
+  left:4.0rem;
+  top:0.8rem;
+}
+.card-3{
+  left:7.0rem;
+  top:0.8rem;
+}
+.card-4{
+  left:1.0rem;
+  top:4.4rem;
+}
+.card-5{
+  left:4.0rem;
+  top:4.4rem;
+}
+.card-6{
+  left:7.0rem;
+  top:4.4rem;
+}
+
+.shade-bg{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right:0;
+  bottom: 0;
+  background:rgba(0, 0, 0, 0.6);
+  z-index: 9;
+}
+.card-shake{
+  animation:cshake .2s ease .5s infinite;
+  -webkit-animation:cshake .2s ease .5s infinite; /*Safari and Chrome*/
+}
+
+@keyframes cshake
+{
+0% {transform:rotate(0deg)}
+25% {transform:rotate(15deg)}
+50% {transform:rotate(0deg)}
+75% {transform:rotate(-15deg)}
+100% {transform:rotate(0deg)}
+}
+
+@-webkit-keyframes cshake /*Safari and Chrome*/
+{
+0% {transform:rotate(0deg) }
+25% {transform:rotate(15deg)}
+50% {transform:rotate(0deg)}
+75% {transform:rotate(-15deg)}
+100% {transform:rotate(0deg)}
+}
+.win-result{
+  position: absolute;
+  width: 8.0rem;
+  height: 8.0rem;
+  left:1.0rem;
+  top:6.0rem;
+  background:url('redpacks.png') no-repeat top;
+  background-size: 100%;
+  z-index: 99;
+}
+.win-result .package-under{
+  position: absolute;
+   width: 100%;
+   height: 4.5rem;
+   background-image: url('bg-back.png');
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   bottom: 0px;
+   z-index: 1;
+}
+.win-result .package-upon{
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+   height: 4.0rem;
+   background-image: url('bg-front-low.png');
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   bottom: 0px;
+}
+.win-result .result{
+  position: absolute;
+  z-index: 2;
+  width: 90%;
+  height: 3.0rem;
+  left:5%;
+  bottom: 3.0rem;
+}
+.win-result .result .head-card{
+  position: absolute;
+  width: 40%;
+  height: 2.0rem;
+  top: -1.0rem;
+  left:30%;
+  background-image: url('body.png');
+   background-repeat: no-repeat;
+   background-size: 100% 100%; 
+}
+.win-result .result .pic-box{
+    position: absolute;
+    width: 100%;
+    height: 3.0rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    border:3px solid #fff;
+    overflow: hidden;
+    left: 0px;
+    bottom: 0px;
+}
+.win-result .sunshine{
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: -50%;
+  left: 0px;
+}
+
+.win-result .sunshine .light{
+  position: absolute;
+  top: 1.536rem;
+  z-index: 100;
+  display: inline-block;
+  width: .68266667rem;
+  height: .34133333rem;
+  background-color: #ff8a2c;
+  border-radius: 50%;
+  box-shadow: 0 0 1.024rem 0.59733333rem #ff8a2c;
+  -webkit-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+  -webkit-animation: showLightBg 1s linear 1;
+  animation: showLightBg 1s linear 1;
+}

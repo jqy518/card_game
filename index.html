@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+<link rel="stylesheet" type="text/css" href="./src/index.css">
+<script src="https://cdn.bootcss.com/jquery/2.1.2/jquery.min.js"></script>
+<script src="./src/index.js"></script>
+<title>age</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+  <div class="game-main">
+    <div class="game-header">
+    </div>
+    <div id="cardBox" class="game-container">
+      <div class="game-card mv-1"></div>
+      <div class="game-card mv-2"></div>
+      <div class="game-card mv-3"></div>
+      <div class="game-card mv-4"></div>
+      <div class="game-card mv-5"></div>
+      <div class="game-card mv-6"></div>
+    </div>
+    <buttton onClick="GAME.reset()">11111</buttton>
+  </div>
+  <div id="shadebg" class="shade-bg" style="display: none;"></div>
+  <div id="win-result" class="win-result">
+    <div class="sunshine">
+        <div class="light"></div>
+    </div>
+    <div class="package-under"></div>
+      <div class="result">
+        <div class="head-card"></div>
+        <div class="pic-box">
+          <img src="./src/xkfdickkja.jpg" width="100%" height="100%">
+        </div>
+      </div>
+    <div class="package-upon"></div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      GAME.init('#cardBox',"#shadebg");
+    });
+  </script>
+</body>
+</html>
