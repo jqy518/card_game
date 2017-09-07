@@ -146,6 +146,7 @@ div { width: 1rem; height: 0.4rem; font-size: 12px; // 默认写上dpr为1的fon
   background:url('redpacks.png') no-repeat top;
   background-size: 100%;
   z-index: 99;
+  display: none;
 }
 .win-result .package-under{
   position: absolute;
@@ -167,6 +168,33 @@ div { width: 1rem; height: 0.4rem; font-size: 12px; // 默认写上dpr为1的fon
    background-size: 100% 100%;
    bottom: 0px;
 }
+.package-upon .title{
+  width: 3.98rem;
+  margin: 0 auto;
+  padding-top:.7rem;
+}
+.package-upon .message{
+  width: 3.5rem;
+  margin: 20px auto;
+  line-height: 2em;
+  height: 2em;
+  font-size: 1em;
+  color: #fff;
+  background:#f33;
+  border-radius: 10px;
+  text-align: center;
+}
+.package-upon .btn{
+  width: 3.5rem;
+  height: 1rem;
+  margin: 0 auto;
+  line-height: 1rem;
+  font-size: 20px;
+  text-align: center;
+  color:#fff;
+  background-image: url('button.png');
+  background-size: 100% 100%;
+}
 .win-result .result{
   position: absolute;
   z-index: 2;
@@ -184,6 +212,8 @@ div { width: 1rem; height: 0.4rem; font-size: 12px; // 默认写上dpr为1的fon
   background-image: url('body.png');
    background-repeat: no-repeat;
    background-size: 100% 100%; 
+   animation-delay: .5s;
+   -webkit-animation-delay: .5s;
 }
 .win-result .result .pic-box{
     position: absolute;
@@ -195,27 +225,74 @@ div { width: 1rem; height: 0.4rem; font-size: 12px; // 默认写上dpr为1的fon
     overflow: hidden;
     left: 0px;
     bottom: 0px;
+    animation-delay: .5s;
+    -webkit-animation-delay: .5s;
+
+/*      animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite; */
+
 }
 .win-result .sunshine{
   position: absolute;
   width: 100%;
   height: 50%;
-  top: -50%;
+  top: 0px;
   left: 0px;
 }
 
-.win-result .sunshine .light{
+.win-result .sunshine .lightbg{
   position: absolute;
-  top: 1.536rem;
-  z-index: 100;
-  display: inline-block;
-  width: .68266667rem;
-  height: .34133333rem;
+  width: 40%;
+  height: 2.0rem;
+  left:30%;
   background-color: #ff8a2c;
   border-radius: 50%;
   box-shadow: 0 0 1.024rem 0.59733333rem #ff8a2c;
-  -webkit-transform: translate(-50%,0);
-  transform: translate(-50%,0);
-  -webkit-animation: showLightBg 1s linear 1;
-  animation: showLightBg 1s linear 1;
+  animation-delay: .7s;
+  -webkit-animation-delay: .7s;
+}
+.win-result .sunshine .light{
+   width: 7rem;
+   height: 7rem;
+   background-image: url('light.png');
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   position: absolute;
+   left: .5rem;
+   top:-2rem;
+   animation-delay: .7s;
+   -webkit-animation-delay: .7s;
+}
+.win-result .sunshine .lightrun{
+  animation:lrun 5s linear 0s infinite;
+  -webkit-animation:lrun 5s linear 0s infinite; /*Safari and Chrome*/
+}
+@keyframes lrun
+{
+ from {transform:rotate(0deg)}
+ to {transform:rotate(360deg)}
+}
+
+@-webkit-keyframes lrun /*Safari and Chrome*/
+{
+  from {transform:rotate(0deg)}
+  to {transform:rotate(360deg)}
+}
+.close-btn{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url('close.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  right: -10px;
+  top:-10px;
+  z-index: 100;
 }

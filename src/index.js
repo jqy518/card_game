@@ -1,3 +1,15 @@
+$.fn.extend({
+  animateCss: function (animationName,cb) {
+      var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+      this.addClass('animated ' + animationName).one(animationEnd, function() {
+          $(this).removeClass('animated ' + animationName);
+          if(cb){
+            cb();
+          }
+      });
+      return this;
+  }
+});
 var GAME = {
   $cards:null,
   $shadebg:null,
@@ -19,6 +31,9 @@ var GAME = {
     this.$cards.on('click',function(){
       self.showDialog($(this));
     });
+    $("#closeBtn").on('click',function(){
+      self.closeResult();
+    })
   },
   clearMarquess(){
     if(this.marquessTime){
@@ -45,13 +60,23 @@ var GAME = {
     setTimeout(function(){
       self.itemReset($item);
       self.reset();
-      self.showResult({status:200,message:'可以打电话的手表',img:'./src/xkfdickkja.jpg'});
+      self.showResult({status:'200',message:'可以打电话的手表',img:'./src/xkfdickkja.jpg'});
     },2000);
   },
   showResult(data){
     if(data.status == '200'){
-
+      $('#win-result').css('display','block');
+      var $light = $('#win-result').find('.light');
+      $light.animateCss('rotateIn',function(){
+        $light.addClass('lightrun');
+      });
     }
+  },
+  closeResult(){
+    this.$shadebg.hide();
+    $('#win-result').css('display','none');
+    $('#win-result').find('.light').removeClass('lightrun');
+    this.dealCard();
   },
   itemReset($item){
     $item.removeClass('all-props card-shake');

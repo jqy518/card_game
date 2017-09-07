@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
 <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
 <link rel="stylesheet" type="text/css" href="./src/index.css">
+<link rel="stylesheet" href="./src/animate.min.css">
 <script src="https://cdn.bootcss.com/jquery/2.1.2/jquery.min.js"></script>
 <script src="./src/index.js"></script>
-<title>age</title>
+<title>game</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 <link href="" rel="stylesheet">
@@ -24,21 +25,29 @@
       <div class="game-card mv-5"></div>
       <div class="game-card mv-6"></div>
     </div>
-    <buttton onClick="GAME.reset()">11111</buttton>
   </div>
   <div id="shadebg" class="shade-bg" style="display: none;"></div>
-  <div id="win-result" class="win-result">
+  <div id="win-result" class="win-result animated bounceIn">
+    <div id="closeBtn" class="close-btn"></div>
     <div class="sunshine">
+        <div class="lightbg animated zoomIn"></div>
         <div class="light"></div>
     </div>
     <div class="package-under"></div>
       <div class="result">
-        <div class="head-card"></div>
-        <div class="pic-box">
+        <div class="head-card animated slideInUp">
+        </div>
+        <div class="pic-box animated slideInUp">
           <img src="./src/xkfdickkja.jpg" width="100%" height="100%">
         </div>
       </div>
-    <div class="package-upon"></div>
+    <div class="package-upon">
+        <div class="title">
+          <img src="./src/win-tip.png" width="100%"/>
+        </div>
+        <div class="message">可以打电话的手表</div>
+        <div class="btn">立即领取</div>
+    </div>
   </div>
   <script type="text/javascript">
     $(document).ready(function(){
